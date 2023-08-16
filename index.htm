@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Text Editor</title>
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/93a3d025e0.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- link tailwind and daisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-serif">
+    <header>
+      <h1 class="text-5xl text-center font-bold mt-20 mb-10">
+        Simple Text Editor
+      </h1>
+    </header>
+    <main class="bg-blue-600 p-5 pt-10 max-w-screen-lg mx-auto">
+      <section>
+        <div class="grid grid-cols-3 mb-10 px-5">
+          <!-- text styles -->
+          <div>
+            <button
+              id="font-bold"
+              class="text-2xl text-white font-bold rounded-md"
+            >
+              <span class="px-2">B</span>
+            </button>
+            <button id="italic" class="text-2xl text-white italic rounded-md">
+              <span class="px-2"> I</span>
+            </button>
+            <button
+              id="underline"
+              class="text-xl text-white font-semibold rounded-md underline"
+            >
+              <span class="px-2"> U </span>
+            </button>
+          </div>
+          <!-- text alinment -->
+          <div id="text-align" class="space-x-2 text-center">
+            <button
+              id="text-left"
+              class="text-2xl text-white bg-blue-400 rounded-md"
+            >
+              <i class="fa-solid fa-align-left px-2"></i>
+            </button>
+            <button
+              id="text-center"
+              class="text-2xl text-white italic rounded-md"
+            >
+              <i class="fa-solid fa-align-center px-2"></i>
+            </button>
+            <button
+              id="text-right"
+              class="text-2xl text-white rounded-md underline"
+            >
+              <i class="fa-solid fa-align-right px-2"></i>
+            </button>
+            <button
+              id="text-justify"
+              class="text-2xl text-white rounded-md underline"
+            >
+              <i class="fa-solid fa-align-justify px-2"></i>
+            </button>
+          </div>
+          <!-- text other styles -->
+          <div class="space-x-2 text-right">
+            <input
+              id="number"
+              type="number"
+              value="16"
+              class="w-14 ps-2 focus:outline-none bg-transparent focus:bg-white text-2xl text-white focus:text-black text-center"
+            />
+            <button
+              id="uppercase"
+              class="text-2xl text-white font-semibold rounded-md"
+            >
+              <span class="px-2"> aA</span>
+            </button>
+            <input id="color" type="color" class="w-10" />
+          </div>
+        </div>
+      </section>
+      <section>
+        <div>
+          <textarea
+            name="textarea"
+            id="text-box"
+            class="w-full focus:outline-none text-black min-h-[600px] px-10 md:px-20 py-12 md:py-24"
+          ></textarea>
+        </div>
+      </section>
+    </main>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/text-style.js"></script>
+    <script src="./js/text-align.js"></script>
+    <script src="./js/text-others.js"></script>
+  </body>
+</html>
